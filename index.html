@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Pencatat Keuangan & Riwayat</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#007bff">
+</head>
+<body>
+    <div class="container">
+        <h2>Pencatat Keuangan</h2>
+        
+        <div class="summary-box">
+            <div class="summary-item">
+                <p>Pemasukan</p>
+                <h3 id="total-income">Rp 0</h3>
+            </div>
+            <div class="summary-item">
+                <p>Pengeluaran</p>
+                <h3 id="total-expense">Rp 0</h3>
+            </div>
+        </div>
+
+        <div class="total-box">
+            <h3>Sisa Saldo</h3>
+            <h1 id="total-balance">Rp 0</h1>
+        </div>
+
+        <form id="transaction-form">
+            <div class="form-group">
+                <label for="trans-name">Keterangan Transaksi</label>
+                <input type="text" id="trans-name" placeholder="Contoh: Gaji Bulanan / Makan Siang" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="trans-amount">Jumlah (Rp)</label>
+                <input type="number" id="trans-amount" placeholder="Contoh: 50000" required>
+            </div>
+
+            <div class="form-group">
+                <label for="trans-type">Jenis Transaksi</label>
+                <select id="trans-type">
+                    <option value="income">Pemasukan (+)</option>
+                    <option value="expense" selected>Pengeluaran (-)</option>
+                </select>
+            </div>
+
+            <button type="submit">Tambah Transaksi</button>
+        </form>
+
+        <h3>Riwayat Transaksi</h3>
+        <ul id="transaction-list">
+            <!-- Data transaksi akan muncul di sini -->
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
